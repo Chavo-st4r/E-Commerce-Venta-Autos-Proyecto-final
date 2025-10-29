@@ -1,0 +1,51 @@
+// 🪟 Ventana modal para login o confirmaciones
+// Incluye backdrop, campos y acciones
+
+@use '../base/variables';
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 420px;
+  width: 100%;
+  padding: 18px;
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    label {
+      font-size: 13px;
+      color: variables.$color-gray;
+      margin-bottom: 6px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid variables.$color-border;
+    }
+  }
+
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .info {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 10px;
+  }
+}

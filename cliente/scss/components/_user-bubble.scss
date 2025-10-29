@@ -1,0 +1,11 @@
+// 🧩 Burbuja de usuario en el header
+// Muestra el nombre o avatar del usuario logueado
+
+@use '../base/variables';
+
+.user-bubble {
+  background: #f1f5f9;
+  padding: 8px 12px;
+  border-radius: 999px;
+  margin-left: 12px;
+}

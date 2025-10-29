@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Autoselpapu — Venta de Coches</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="/img/favicon.png" type="image/plantilla-logotipo-detalle-degradado.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="header-content">
+    <!-- 🔰 Logo -->
+    <div class="brand">
+      <img src="/img/plantilla-logotipo-detalle-degradado.png" alt="Logo AutosRápidos">
+      <div>
+        <strong>AutosElpapu</strong>
+        <div class="sub">Compra · Vende · Financiá</div>
+      </div>
+    </div>
+
+    <!-- 🧭 Navegación -->
+    <nav class="nav-principal">
+      <div class="nav-links">
+        <a href="#listado">Autos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="pages/nosotros.html">Nosotros</a>
+      </div>
+      <div class="nav-sesion">
+        <button id="loginBtn" class="btn-outline2">Iniciar sesión</button>
+        <span id="userArea" class="user-bubble" style="display:none">
+          <span id="userName">Usuario</span>
+          <button id="logoutBtn" class="btn-logout">Cerrar</button>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <div class="banda-movil">
+  <p>🚗 ¡Promoción especial! Financiación en 12 cuotas sin interés para autos seleccionados. 🏁</p>
+</div>
+
+
+  <main class="container">
+    <section class="hero">
+      <div class="left">
+        <h1>Encuentra tu próximo coche</h1>
+        <p>Explora cientos de autos verificados, filtra por marca, modelo, año y precio. Publica tu vehículo en minutos.</p>
+        <div class="actions">
+          <button class="btn-primary" id="verAutos">Ver autos</button>
+          <button class="btn-outline" id="venderAuto">Vender mi auto</button>
+        </div>
+      </div>
+      <div class="right">
+        <img src="/img/Toyota Yaris Hatchback.png" alt="coche destacado">
+      </div>
+    </section>
+
+    <section>
+      <div class="filters">
+        <input id="searchInput" type="search" placeholder="Buscar por marca, modelo o año">
+        <select id="filtroMarca">
+          <option value="">Todas las marcas</option>
+          <option>Ford</option>
+          <option>Toyota</option>
+          <option>Volkswagen</option>
+        </select>
+        <select id="orden">
+          <option value="reciente">Más recientes</option>
+          <option value="precioAsc">Precio: menor a mayor</option>
+          <option value="precioDesc">Precio: mayor a menor</option>
+        </select>
+      </div>
+
+      <div id="listado" class="cars-grid"></div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h3>Contacto</h3>
+      <p>¿Dudas o consultas? Dejanos tu mensaje.</p>
+      <form id="contactForm">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit" class="btn-primary">Enviar</button>
+      </form>
+    </section>
+
+<footer>
+  <div class="footer-content">
+    <p>© <span id="year"></span> AutosRápidos — Todos los derechos reservados</p>
+    <div class="redes-sociales">
+      <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  </main>
+
+  <!-- Modal de login -->
+  <div id="modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal">
+      <h2>Iniciar sesión</h2>
+      <form id="loginForm">
+        <div class="field">
+          <label for="username">Usuario</label>
+          <input id="username" required>
+        </div>
+        <div class="field">
+          <label for="password">Contraseña</label>
+          <input id="password" type="password" required>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="closeModal" class="btn-outline">Cancelar</button>
+          <button type="submit" class="btn-primary">Entrar</button>
+        </div>
+        <p class="info">Usuario de prueba: <strong>user</strong> / Contraseña: <strong>pass</strong></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

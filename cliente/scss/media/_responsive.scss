@@ -1,0 +1,9 @@
+// 📱 Media queries para dispositivos móviles
+// Ajusta layout en pantallas pequeñas
+
+.hero {
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

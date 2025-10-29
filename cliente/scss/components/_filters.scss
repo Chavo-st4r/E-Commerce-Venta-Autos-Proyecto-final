@@ -1,0 +1,17 @@
+// 🔍 Filtros para búsqueda de autos
+// Incluye inputs y selects estilizados
+
+@use '../base/variables';
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin: 18px 0;
+
+  input,
+  select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid variables.$color-border;
+  }
+}

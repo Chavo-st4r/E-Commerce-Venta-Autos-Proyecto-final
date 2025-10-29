@@ -1,0 +1,39 @@
+// 🎯 Estilos reutilizables para botones
+// Incluye variantes: primario, outline, logout, contacto
+@use '../base/variables';
+
+button {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: variables.$color-primary;
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: variables.$color-dark;
+}
+
+.btn-outline2 {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: white;
+}
+
+.btn-logout {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: variables.$color-dark;
+}
+
+.btn-contacto {
+  padding: 18px;
+}

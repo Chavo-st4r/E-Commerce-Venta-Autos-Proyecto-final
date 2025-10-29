@@ -1,0 +1,108 @@
+@use '../base/variables';
+
+// 🧭 Página Nosotros — Estilo automotriz de lujo
+.nosotros {
+  padding: 48px 24px;
+  background: variables.$color-light;
+  color: variables.$color-dark;
+
+  h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+      color: variables.$color-dark;
+  }
+
+  .intro-nosotros {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      font-size: 36px;
+      color: variables.$color-primary;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 12px;
+    }
+  }
+
+  .valores {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 48px 0;
+
+    .valor {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+      max-width: 280px;
+
+      i {
+        font-size: 32px;
+        color: #d4af37; // dorado elegante
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: variables.$color-dark;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .equipo {
+    text-align: center;
+
+    h2 {
+      font-size: 28px;
+      color: variables.$color-primary;
+    }
+
+    .miembros {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+
+      .miembro {
+        background: white;
+        border-radius: 12px;
+        padding: 16px;
+        max-width: 220px;
+        box-shadow: 0 4px 12px rgba(2, 6, 23, 0.05);
+
+        img {
+          width: 100%;
+          border-radius: 8px;
+          margin-bottom: 12px;
+        }
+
+        h4 {
+          font-size: 18px;
+          margin-bottom: 4px;
+        }
+
+        p {
+          font-size: 14px;
+      color: variables.$color-dark;
+        }
+      }
+    }
+  }
+}

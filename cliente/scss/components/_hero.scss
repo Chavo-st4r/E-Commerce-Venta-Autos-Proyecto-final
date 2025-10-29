@@ -1,0 +1,18 @@
+// 🖼️ Sección destacada con imagen principal
+// Usada para mostrar contenido promocional o destacado
+
+.hero {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.08);
+
+  img {
+    border-radius: 8px;
+    display: block;
+  }
+}

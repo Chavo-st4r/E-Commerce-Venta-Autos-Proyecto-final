@@ -1,0 +1,22 @@
+// styles.scss
+
+@use 'base/reset';
+@use 'base/variables';
+
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/container';
+
+@use 'components/hero';
+@use 'components/buttons';
+@use 'components/user-bubble';
+@use 'components/filters';
+@use 'components/card';
+@use 'components/contact';
+@use 'components/modal';
+@use 'components/banda-movil';
+
+@use 'pages/home';
+@use 'pages/nosotros';
+
+@use 'media/responsive';

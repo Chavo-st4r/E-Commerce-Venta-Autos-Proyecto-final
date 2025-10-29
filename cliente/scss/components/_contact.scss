@@ -1,0 +1,26 @@
+// 📬 Formulario de contacto
+// Permite enviar consultas desde la página
+
+@use '../base/variables';
+
+.contacto {
+  margin-top: 28px;
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.04);
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    input,
+    textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid variables.$color-border;
+      flex: 1;
+    }
+  }
+}

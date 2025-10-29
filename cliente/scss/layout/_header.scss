@@ -1,0 +1,60 @@
+@use '../base/variables';
+
+// 🧱 Header con estructura flexible
+header {
+  background: linear-gradient(90deg, variables.$color-primary, variables.$color-dark);
+  color: white;
+  padding: 18px 24px;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    img {
+      height: 100px;
+    }
+
+    .sub {
+      font-size: 12px;
+      color: variables.$color-muted;
+    }
+  }
+
+  .nav-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+
+      a {
+        text-decoration: none;
+        color: variables.$color-muted;
+        font-weight: 500;
+        font-size: 16px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    .nav-sesion {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+}

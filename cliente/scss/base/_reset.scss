@@ -1,0 +1,15 @@
+// 🔄 Reset básico y configuración global
+// Aplica box-sizing universal y estilos base del body
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  margin: 0;
+  color: #1f2937;
+  background: #f8fafc;
+}

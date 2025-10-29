@@ -1,0 +1,25 @@
+// 🏁 Banda móvil animada entre header y hero
+// Muestra mensajes promocionales en movimiento horizontal
+
+@use '../base/variables';
+
+.banda-movil {
+  background: variables.$color-secondary;
+  color: white;
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+
+  p {
+    white-space: nowrap;
+    display: inline-block;
+    padding-left: 100%;
+    animation: mover 15s linear infinite;
+    font-weight: 600;
+  }
+
+  @keyframes mover {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+}

@@ -1,0 +1,38 @@
+// 🚗 Tarjetas individuales de autos
+// Muestra imagen, precio y botones de acción
+
+@use '../base/variables';
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+
+  .card {
+    background: white;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(2, 6, 23, 0.06);
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .price {
+      margin-top: 8px;
+      font-weight: 700;
+      color: variables.$color-secondary;
+    }
+
+    .actions {
+      margin-top: auto;
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
