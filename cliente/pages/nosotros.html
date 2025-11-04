@@ -7,19 +7,43 @@
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" href="/img/favicon.png" type="image/png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- 🔝 Header reutilizable -->
   <header>
     <div class="header-content">
-      <div class="brand">
-        <img src="/img/plantilla-logotipo-detalle-degradado.png" alt="Logo AutosElpapu" />
-        <div>
-          <strong>AutosElpapu</strong>
-          <div class="sub">Compra · Vende · Financiá</div>
-        </div>
+
+      <!-- 🍔 Menú hamburguesa para móvil -->
+<button class="btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas">
+  <i class="fas fa-bars"></i>
+</button>
+
+    <!-- 🔰 Logo -->
+    <div class="brand">
+      <img src="/img/plantilla-logotipo-detalle-degradado.png" alt="Logo AutosRápidos">
+      <div>
+        <strong>AutosElpapu</strong>
+        <div class="sub">Compra · Vende · Financiá</div>
       </div>
+    </div>
+
+    <!-- 🧭 Menú offcanvas lateral -->
+<div class="offcanvas offcanvas-start menu-offcanvas" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="menuOffcanvasLabel">Menú</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link text-white" href="../index.html#listado">Autos</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="../index.html#contacto">Contacto</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="nosotros.html">Nosotros</a></li>
+      <li class="nav-item"><button id="loginBtn" class="btn btn-outline-warning mt-3">Iniciar sesión</button></li>
+    </ul>
+  </div>
+</div>
 
       <nav class="nav-principal">
         <div class="nav-links">
@@ -59,6 +83,41 @@
       </div>
     </section>
 
+    <section class="historia-lujo">
+  <h2>Nuestra Historia</h2>
+  <div class="timeline-lujo">
+    <div class="evento" style="--i:0">
+      <div class="icono"><i class="fas fa-rocket"></i></div>
+      <div class="contenido">
+        <h3>2024</h3>
+        <p>Expansión digital con plataforma inteligente y simuladores de financiación.</p>
+      </div>
+    </div>
+    <div class="evento" style="--i:1">
+      <div class="icono"><i class="fas fa-handshake"></i></div>
+      <div class="contenido">
+        <h3>2020</h3>
+        <p>Alianza con marcas líderes para ofrecer autos certificados.</p>
+      </div>
+    </div>
+    <div class="evento" style="--i:2">
+      <div class="icono"><i class="fas fa-store"></i></div>
+      <div class="contenido">
+        <h3>2016</h3>
+        <p>Apertura del primer showroom físico en Buenos Aires.</p>
+      </div>
+    </div>
+    <div class="evento" style="--i:3">
+      <div class="icono"><i class="fas fa-car"></i></div>
+      <div class="contenido">
+        <h3>2012</h3>
+        <p>Fundación de AutosElpapu con visión de transformar el mercado automotor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     <section class="equipo">
       <h2>Nuestro Equipo</h2>
       <p>Somos un grupo de profesionales apasionados por la movilidad, el diseño y la tecnología. Cada miembro aporta excelencia y compromiso.</p>
@@ -96,5 +155,9 @@
 
   <!-- 📦 Scripts -->
   <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <a href="https://wa.me/549XXXXXXXXXX" class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
 </body>
 </html>

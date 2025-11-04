@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Auto</title>
+  <link rel="stylesheet" href="../css/detalle.css">
+</head>
+<body>
+  <header>
+
+
+  <div class="header-content">
+    <!-- 🔰 Logo -->
+    <div class="brand">
+      <img src="/img/plantilla-logotipo-detalle-degradado.png" alt="Logo AutosRápidos">
+      <div>
+        <strong>AutosElpapu</strong>
+        <div class="sub">Compra · Vende · Financiá</div>
+      </div>
+    </div>
+
+    <!-- 🧭 Navegación -->
+    <nav class="nav-principal">
+      <div class="nav-links">
+        <a href="#listado">Autos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="pages/nosotros.html">Nosotros</a>
+      </div>
+      <div class="nav-sesion">
+        <button id="loginBtn" class="btn-outline2">Iniciar sesión</button>
+        <span id="userArea" class="user-bubble" style="display:none">
+          <span id="userName">Usuario</span>
+          <button id="logoutBtn" class="btn-logout">Cerrar</button>
+        </span>
+      </div>
+    </nav>
+  </div>
+  </header>
+
+  <main id="detalle-auto" class="container">
+    <h1 id="auto-titulo"></h1>
+    <img id="auto-imagen" src="" alt="">
+    <p id="auto-descripcion"></p>
+    <div id="auto-precio"></div>
+  </main>
+
+  <script src="../scripts.js"></script>
+  <script>
+    // 🔹 Obtener el ID del coche desde la URL
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get('id'));
+
+    // 🔹 Buscar el coche en la lista y mostrarlo
+    const car = cars.find(c => c.id === id);
+    if (car) {
+      document.getElementById('auto-titulo').textContent = `${car.brand} ${car.model} (${car.year})`;
+      document.getElementById('auto-imagen').src = car.img;
+      document.getElementById('auto-imagen').alt = car.brand;
+      document.getElementById('auto-precio').textContent = `Precio: USD ${car.price.toLocaleString()}`;
+      document.getElementById('auto-descripcion').textContent = 'Este vehículo se encuentra en excelente estado, con mantenimiento al día y listo para transferir.';
+    } else {
+      document.querySelector('main').innerHTML = '<p>Auto no encontrado.</p>';
+    }
+  </script>
+</body>
+</html>

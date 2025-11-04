@@ -2,7 +2,9 @@ const cars = [
   {id:1, brand:'Toyota', model:'Yaris Hatchback', year:2018, price:35000, img:'/img/Toyota Yaris Hatchback2.png'},
   {id:2, brand:'Peugeot', model:'208', year:2020, price:18000, img:'/img/Peugeot 208.jpg'},
   {id:3, brand:'Fiat', model:'Cronos', year:2017, price:12000, img:'/img/Fiat Cronos.jpeg'},
-  {id:4, brand:'Volkswagen', model:'Polo', year:2021, price:26000, img:'/img/Volkswagen Polo.jpeg'}
+  {id:4, brand:'Volkswagen', model:'Polo', year:2021, price:26000, img:'/img/Volkswagen Polo.jpeg'},
+  {id:5, brand:'Renault', model:'Sandero', year:2016, price:20000, img:'/img/Renault Sandero.png'},
+  {id:6, brand:'Chevrolet', model:'Tracker', year:2022, price:28000, img:'/img/Chevrolet Tracker.png'}
 ];
 
 const listado = document.getElementById('listado');
@@ -19,8 +21,8 @@ function renderCars(list){
     div.innerHTML = `
       <img src="${c.img}" alt="${c.brand} ${c.model}">
       <h3>${c.brand} ${c.model} — ${c.year}</h3>
-      <p>Detalles: excelente estado, kilometraje moderado.</p>
-      <div class="price">USD ${c.price.toLocaleString()}</div>
+      <p>Detalles: excelente estado, kilometraje moderadooo.</p>
+      <div class="price">$ ${c.price.toLocaleString()}</div>
       <div class="actions">
         <button class="btn-outline" onclick="viewDetails(${c.id})">Ver</button>
         <button class="btn-primary" onclick="contactSeller(${c.id})">Contactar</button>
@@ -31,9 +33,10 @@ function renderCars(list){
 }
 
 function viewDetails(id){
-  const car = cars.find(c=>c.id===id);
-  alert(`${car.brand} ${car.model} (${car.year}) — Precio: USD ${car.price}`);
+  // Redirige a la página detalle con el id como parámetro
+  window.location.href = `pages/detalle.html?id=${id}`;
 }
+
 
 function contactSeller(id){
   if(!isLoggedIn()){ openModal(); return }
@@ -117,3 +120,4 @@ document.getElementById('verAutos').addEventListener('click', ()=>{
 document.getElementById('venderAuto').addEventListener('click', ()=>{
   if(!isLoggedIn()) openModal(); else alert('Formulario para publicar auto (a implementar)');
 });
+

@@ -57,4 +57,60 @@ header {
       gap: 12px;
     }
   }
+
+  // 🍔 Botón hamburguesa institucional
+  .btn-menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: variables.$color-light;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  // 🧭 Offcanvas institucional
+  .offcanvas-start {
+    background-color: rgba(10, 25, 50, 0.85); // azul marino transparente
+    backdrop-filter: blur(8px);
+    color: white;
+    border-right: 2px solid variables.$color-accent;
+  }
+
+  .offcanvas-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .offcanvas-title {
+    font-weight: 600;
+    color: white;
+  }
+
+  .offcanvas-body {
+    padding-top: 1rem;
+
+    .nav-link {
+      color: white;
+      font-weight: 500;
+      padding: 10px 0;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: variables.$color-accent;
+      }
+    }
+
+    .btn-outline-warning {
+      border-color: variables.$color-light;
+      color: variables.$color-light;
+
+      &:hover {
+        background-color: variables.$color-accent;
+        color: #0a0a0a;
+      }
+    }
+  }
 }

@@ -59,6 +59,50 @@ header .nav-principal .nav-sesion {
   align-items: center;
   gap: 12px;
 }
+header .btn-menu {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #f8fafc;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+header .btn-menu:hover {
+  transform: scale(1.2);
+}
+header .offcanvas-start {
+  background-color: rgba(10, 25, 50, 0.85);
+  backdrop-filter: blur(8px);
+  color: white;
+  border-right: 2px solid #d4af37;
+}
+header .offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+header .offcanvas-title {
+  font-weight: 600;
+  color: white;
+}
+header .offcanvas-body {
+  padding-top: 1rem;
+}
+header .offcanvas-body .nav-link {
+  color: white;
+  font-weight: 500;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+header .offcanvas-body .nav-link:hover {
+  color: #d4af37;
+}
+header .offcanvas-body .btn-outline-warning {
+  border-color: #f8fafc;
+  color: #f8fafc;
+}
+header .offcanvas-body .btn-outline-warning:hover {
+  background-color: #d4af37;
+  color: #0a0a0a;
+}
 
 footer {
   margin-top: 24px;
@@ -277,6 +321,39 @@ button {
   }
 }
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  color: white;
+  font-size: 32px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5d;
+}
+.whatsapp-float i {
+  pointer-events: none;
+  display: block;
+  line-height: normal;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
 .nosotros {
   padding: 48px 24px;
   background: #f8fafc;
@@ -364,6 +441,77 @@ button {
 .nosotros .equipo .miembros .miembro p {
   font-size: 14px;
   color: #0b1220;
+}
+.nosotros .historia-lujo {
+  padding: 64px 24px;
+  text-align: center;
+}
+.nosotros .historia-lujo h2 {
+  font-size: 36px;
+  margin-bottom: 48px;
+  color: #0f172a;
+}
+.nosotros .historia-lujo .timeline-lujo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+.nosotros .historia-lujo .timeline-lujo::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: #0f172a;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.nosotros .historia-lujo .timeline-lujo .evento {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: subir 0.8s ease-out forwards;
+  animation-delay: calc(var(--i) * 0.3s);
+}
+.nosotros .historia-lujo .timeline-lujo .evento .icono {
+  background: white;
+  border: 3px solid #0f172a;
+  border-radius: 50%;
+  padding: 16px;
+  font-size: 24px;
+  color: #0f172a;
+  z-index: 1;
+  box-shadow: 0 0 0 6px white;
+}
+.nosotros .historia-lujo .timeline-lujo .evento .contenido {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  margin-top: 16px;
+  text-align: left;
+}
+.nosotros .historia-lujo .timeline-lujo .evento .contenido h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #0b1220;
+}
+.nosotros .historia-lujo .timeline-lujo .evento .contenido p {
+  font-size: 16px;
+  color: #0b1220;
+}
+@keyframes subir {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 640px) {
